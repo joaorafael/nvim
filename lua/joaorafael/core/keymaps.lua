@@ -2,13 +2,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local key = vim.key.set -- for conciseness
+local key = vim.keymap.set -- for conciseness
 
 ---------------------
 -- General keys -------------------
 
 -- clear search highlights
-key("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+--key("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Select all
 key("n", "<C-a>", "ggVG", { desc = "Select All" })

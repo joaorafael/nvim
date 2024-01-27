@@ -37,8 +37,8 @@ return {
       opts.desc = "See available code actions"
       key({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
-      opts.desc = "Smart rename"
-      key("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+      opts.desc = "Code rename"
+      key("n", "<leader>cr", vim.lsp.buf.rename, opts) -- code rename
 
       opts.desc = "Show buffer diagnostics"
       key("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
@@ -55,8 +55,6 @@ return {
       opts.desc = "Show documentation for what is under cursor"
       key("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
-      opts.desc = "Restart LSP"
-      key("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
     end
 
     -- used to enable autocompletion (assign to every lsp server config)
