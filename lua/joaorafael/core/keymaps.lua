@@ -7,8 +7,8 @@ local key = vim.keymap.set -- for conciseness
 ---------------------
 -- General keys -------------------
 
--- clear search highlights
---key("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+-- c-- Clear search with <esc>
+key({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
 -- Select all
 key("n", "<C-a>", "ggVG", { desc = "Select All" })
@@ -30,6 +30,8 @@ key("n", "<m-down>", "3<C-w>-", { desc = "Decreate window size horizontally" })
 -- search and keep in the middle of screen
 key("n", "n", "nzz", { desc = "Search next center cursor" })
 key("n", "N", "Nzz", { desc = "Search previous center cursor" })
+key("n", "<M-p>", ":bp", { desc = "Previous Buffer" })
+key("n", "<M-n>", ":bn", { desc = "Next BufferSearch previous center cursor" })
 
 -- Stay in indent mode
 key("v", "<", "<gv", { desc = "Indent more and keep visual selections" })
@@ -59,5 +61,6 @@ key("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 key("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 key("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
-key("n", "<leader>e", "<cmd>Explore<CR>", { desc = "Open Explore" })
+key("n", "<leader>ee", "<cmd>Explore<CR>", { desc = "Open Explore" })
+key("n", "<leader>eo", ":edit **/*", { desc = "Open File" })
 
