@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "joaorafael.plugins" }, { import = "joaorafael.plugins.lsp" } }, {
   install = {
-    colorscheme = { "kanagawa" },
+    colorscheme = { "catppuccin" },
   },
   checker = {
     enabled = true,
